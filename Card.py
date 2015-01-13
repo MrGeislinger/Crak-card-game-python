@@ -8,11 +8,11 @@ class Card:
 	#Initiate card
 	def __init__(self,value,suit):
 		#Check to see if valid inputs, else return False
-		if suit in suits:
+		if suit in self.suits:
 			self.suit  = suit
 		else:
 			return False
-		if value in values:
+		if value in self.values:
 			self.value = value
 		else:
 			return False
