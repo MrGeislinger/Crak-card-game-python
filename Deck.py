@@ -12,6 +12,10 @@ class Deck(Card):
 		#if(hasJoker):
 		#	self.cards.extend([('W','W'),('W','W')])
 
+	#Return how many cards are in deck
+	def __len__(self):
+		return len(self.cards)
+
 	#Draw a card from the deck and return a card
 	def draw(self,fromTop=True):
 		#Remove from the front/top of deck
@@ -20,10 +24,6 @@ class Deck(Card):
 		#Remove from the back/bottom of deck
 		else:
 			return self.cards.pop()
-
-	#Return how many cards are in deck
-	def sizeOf(self):
-		return len(self.cards)
 
 	#Shuffle deck and return the newly shuffled deck
 	def shuffle(self):
