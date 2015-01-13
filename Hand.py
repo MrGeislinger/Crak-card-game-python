@@ -10,6 +10,8 @@ class Hand(Card):
 	def __str__(self,joinWith=','):
 		handStr = ''
 		for card in self.cards:
-			handStr += str(card) + joinWith
+#			print card
+			handStr += str(card) 
+			handStr += joinWith
 		#Returns all of the cards (with no trail joinWith character)
-		return handStr[:1]
+		return handStr[:-1]
