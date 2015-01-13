@@ -1,17 +1,16 @@
+from Card import Card
+
 #Deck
-class Deck:
+class Deck(Card):
 	'''Definition of a card deck.'''
 	from random import shuffle as rShuffle
 
 	def __init__(self,hasJoker=False):
-		self.suits  = ['H','D','S','C']
-		self.values = [str(x) for x in range(2,10)] #2-9 cards
-		self.values.extend(['T','J','Q','K','A']) #Face cards (including the 10s)
 		#Assemble deck
-		self.cards = [(v,s) for v in self.values for s in self.suits]
+		self.cards = [Card(v,s) for v in self.values for s in self.suits]
 		#Add Joker cards (2) as 'WW' if needed
-		if(hasJoker):
-			self.cards.extend([('W','W'),('W','W')])
+		#if(hasJoker):
+		#	self.cards.extend([('W','W'),('W','W')])
 
 	#Draw a card from the deck and return a card
 	def draw(self,fromTop=True):
