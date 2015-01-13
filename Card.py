@@ -12,3 +12,7 @@ class Card:
 		self.value = value if value in self.values else None
 		#Create card representation
 		self.card = (self.value, self.suit)
+	
+	#Return a string of value & suit to 'VS'
+	def __str__(self):
+		return (self.value+self.suit)
